@@ -38,9 +38,9 @@ button{
         </p>
         <p>
             <label>RGB:</label>
-            <input type="text" id="redInput" value="0" onChange="convertFromRGB" />
-            <input type="text" id="greenInput" value="0" onChange="convertFromRGB" />
-            <input type="text" id="blueInput" value="255" onChange="convertFromRGB" />
+            <input type="text" id="redInput" value="0" onChange="convertFromRGB();" />
+            <input type="text" id="greenInput" value="0" onChange="convertFromRGB();" />
+            <input type="text" id="blueInput" value="255" onChange="convertFromRGB();" />
         </p>
         <p>
             <button type="button" style="line-height: 30px;" onclick = "convert();">Convert</button>
@@ -52,7 +52,7 @@ button{
                 var gValue = document.getElementById("greenInput").value;
                 var bValue = document.getElementById("blueInput").value;
                 var decValue = rValue * 256 * 256 + gValue * 256 + bValue;
-                document.getElementById("decInput").value = 6;
+                document.getElementById("decInput").value = decValue;
             }
         </script>
     </fieldset>
