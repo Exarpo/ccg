@@ -48,9 +48,9 @@ button{
         <script>
             function convertFromRGB()
             {
-                var rValue = ParseInt(document.getElementById("redInput").value);
-                var gValue = ParseInt(document.getElementById("greenInput").value);
-                var bValue = ParseInt(document.getElementById("blueInput").value);
+                var rValue = parseInt(document.getElementById("redInput").value);
+                var gValue = parseInt(document.getElementById("greenInput").value);
+                var bValue = parseInt(document.getElementById("blueInput").value);
                 var decValue = rValue * 256 * 256 + gValue * 256 + bValue;
                 document.getElementById("decInput").value = decValue;
             }
