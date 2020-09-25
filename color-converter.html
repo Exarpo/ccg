@@ -44,9 +44,6 @@ button{
             <input type="text" id="greenInput" value="0" onChange="convertFromRGB();" />
             <input type="text" id="blueInput" value="255" onChange="convertFromRGB();" />
         </p>
-        <p>
-            <button type="button" style="line-height: 30px;" onclick = "convert();">Convert</button>
-        </p>
         <script>
             function convertFromRGB()
             {
@@ -59,10 +56,11 @@ button{
                 var r = rValue / 255.0; 
                 var g = gValue / 255.0; 
                 var b = bValue / 255.0;  
-        double cmax = Math.max(r, Math.max(g, b)); // maximum of r, g, b 
-        double cmin = Math.min(r, Math.min(g, b)); // minimum of r, g, b 
-        double diff = cmax - cmin; // diff of cmax and cmin. 
-        double h = -1, s = -1;
+        var cmax = Math.max(r, Math.max(g, b)); // maximum of r, g, b 
+        var cmin = Math.min(r, Math.min(g, b)); // minimum of r, g, b 
+        var diff = cmax - cmin; // diff of cmax and cmin. 
+        var h = -1;
+        var s = -1;
         if (cmax == cmin) 
             h = 0;  
 
