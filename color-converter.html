@@ -37,15 +37,22 @@ button{
             <input type="text" id="binInput" value="11111111" />
         </p>
         <p>
+            <label>Red:</label>
+            <input type="text" id="redInput" value="0" />
+            <label>Green:</label>
+            <input type="text" id="greenInput" value="0" />
+            <label>Blue:</label>
+            <input type="text" id="blueInput" value="255" />
+        </p>
+        <p>
             <button type="button" style="line-height: 30px;" onclick = "convert();">Convert</button>
         </p>
         <script>
             function convert()
             {
-                var hexValue = document.getElementById("hexInput").value
-                var decValue = document.getElementById("decInput").value
+                var hexValue = document.getElementById("hexInput").value;
+                var decValue = document.getElementById("decInput").value;
                 var binValue = document.getElementById("binInput").value;
-                alert(hexValue+decValue+binValue);
             }
         </script>
     </fieldset>
