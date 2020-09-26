@@ -83,11 +83,17 @@ button{
             s = (diff / cmax) * 100;  
 
         var v = cmax * 100; 
-
         document.getElementById("hInput").value = h;
         document.getElementById("sInput").value = s;
         document.getElementById("vInput").value = v;
-       } 
+        
+        document.getElementById("hexInput").value = "#" + rgbComponentToHex(rValue) + rgbComponentToHex(gValue) + rgbComponentToHex(bValue);
+       }
+        function rgbComponentToHex(i)
+        {
+            var hex = i.toString(16)
+            return hex.length == 1 ? "0" + hex : hex;
+        {
         </script>
     </fieldset>
 </html>
