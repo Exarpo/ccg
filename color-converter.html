@@ -95,10 +95,10 @@ button{
         document.getElementById("sInput").value = s;
         document.getElementById("vInput").value = v;
         
-        var hexValue = "#" + ((1 << 24) + (rValue << 16) + (gValue << 8) + bValue).toString(16).slice(1)
+        var hexValue = "#" + ((1 << 24) + (rValue << 16) + (gValue << 8) + bValue).toString(16).slice(1);
         document.getElementById("hexInput").value = hexValue;
 
-        document.getElementById("colorSquare").background-color = hexValue;
+        //document.getElementById("colorSquare").background-color = hexValue;
      }
         </script>
     </fieldset>
