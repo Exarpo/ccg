@@ -87,13 +87,13 @@ button{
         document.getElementById("sInput").value = s;
         document.getElementById("vInput").value = v;
         
-        document.getElementById("hexInput").value = "#" + rgbComponentToHex(rValue) + rgbComponentToHex(gValue) + rgbComponentToHex(bValue);
+        document.getElementById("hexInput").value = "#" + ((1 << 24) + (rValue << 16) + (gValue << 8) + bValue).toString(16).slice(1)
        }
-        function rgbComponentToHex(i)
+        /*function rgbComponentToHex(i)
         {
             var hex = i.toString(16)
             return hex.length == 1 ? "0" + hex : hex;
-        {
+        {*/
         </script>
     </fieldset>
 </html>
