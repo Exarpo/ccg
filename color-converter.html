@@ -15,8 +15,8 @@ button{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .square{
-    height:50px;
-    width:50px;
+    height:100px;
+    width:100px;
     background-color:#fff;
 }
 </style>
@@ -26,9 +26,8 @@ button{
 <a href="https://exarpo.github.io/tools/"><button style="line-height: 30px;">⬅️ Home</button></a>
 <body>
     <h1>Color Converter</h1>
-    <p>Generate color codes.</p>
+    <p>Convert colors...</p>
     <fieldset>
-        <legend>Input Field</legend>
         <p>
             <label>Hex:</label>
             <input type="text" id="hexInput" value="#0000ff" onChange="convert();" />
@@ -50,7 +49,7 @@ button{
             <input type="text" id="blueInput" value="255" onChange="convertFromRGB();" />
         </p>
         <p>
-            <div class = "square"></div>
+            <div class = "square" id = "colorSquare"></div>
         </p>
 
         <script>
@@ -96,8 +95,11 @@ button{
         document.getElementById("sInput").value = s;
         document.getElementById("vInput").value = v;
         
-        document.getElementById("hexInput").value = "#" + ((1 << 24) + (rValue << 16) + (gValue << 8) + bValue).toString(16).slice(1)
-       }
+        var hexValue = "#" + ((1 << 24) + (rValue << 16) + (gValue << 8) + bValue).toString(16).slice(1);
+        document.getElementById("hexInput").value = hexValue;
+
+        document.getElementById("colorSquare").background-color = hexValue;
+     }
         </script>
     </fieldset>
 </html>
