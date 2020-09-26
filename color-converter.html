@@ -30,7 +30,7 @@ button{
     <fieldset>
         <p>
             <label>Hex:</label>
-            <input type="text" id="hexInput" value="#000000" onChange="convert();" />
+            <input type="text" id="hexInput" value="#000000" onChange="convertFromHex();" />
         </p>
         <p>
             <label>Dec:</label>
@@ -53,6 +53,24 @@ button{
         </p>
 
         <script>
+            function convertFromHex()
+            {
+                var hexValue = parseInt(document.getElementById("hexInput").value);
+                var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexValue);
+                document.getElementById("redInput").value = parseInt(result[1], 16);
+                document.getElementById("greenInput").value = parseInt(result[2], 16);
+                document.getElementById("blueInput").value = parseInt(result[3], 16);
+                convertFromRGB();
+            }
+            function convertFromDec()
+            {
+                //dec to rgb
+            }
+            function convertFromHSV()
+            {
+                //hsv to rgb
+            }
+
             function convertFromRGB()
             {
                 var rValue = parseInt(document.getElementById("redInput").value);
