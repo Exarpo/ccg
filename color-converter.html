@@ -55,11 +55,11 @@ button{
         <script>
             function convertFromHex()
             {
-                var hexValue = parseInt(document.getElementById("hexInput").value);
-                var result = parseInt(hexValue, 16);
-                document.getElementById("redInput").value = (result >> 16) & 255;
-                document.getElementById("greenInput").value = (result >> 8) & 255;
-                document.getElementById("blueInput").value = result & 255;
+                var hexValue = document.getElementById("hexInput").value.match(/.{1,2}/g);
+                var rgbArray = [parseInt(hexValue[0], 16), parseInt(hexValue[1], 16), parseInt(hexValue[2], 16) ];
+                document.getElementById("redInput").value = rgbArray[0];
+                document.getElementById("greenInput").value = rgbArray[1];
+                document.getElementById("blueInput").value = rgbArray[2];
                 alert(document.getElementById("redInput").value+", "+document.getElementById("blueInput").value+", "+document.getElementById("greenInput").value);
                 convertFromRGB();
             }
