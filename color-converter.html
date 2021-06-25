@@ -60,7 +60,7 @@ button{
                 document.getElementById("redInput").value = (result >> 16) & 255;
                 document.getElementById("greenInput").value = (result >> 8) & 255;
                 document.getElementById("blueInput").value = result & 255;
-                alert((document.getElementById("redInput").value).concat(', ',document.getElementById("blueInput").value),', ',document.getElementById("blueInput").value);
+                alert(document.getElementById("redInput").value+", "+document.getElementById("blueInput").value+", "+document.getElementById("greenInput").value);
                 convertFromRGB();
             }
             function convertFromDec()
